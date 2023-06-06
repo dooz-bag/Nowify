@@ -18,8 +18,7 @@
       </div>
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
-      <h1 class="now-playing__track" v-text="player.trackTitle"></h1>
-      <h2 class="now-playing__artists" v-text="getTrackArtists"></h2>
+      <h1 class="now-playing__idle-heading">No music is playing 😔</h1>
     </div>
   </div>
 </template>
@@ -207,11 +206,11 @@ export default {
       /**
        * Player is active, but user has paused.
        */
-      if (this.playerResponse.is_playing === false) {
-        this.playerData = this.getEmptyPlayer()
+     // if (this.playerResponse.is_playing === false) {
+     //   this.playerData = this.getEmptyPlayer()
 
-        return
-      }
+       // return
+      //}
 
       /**
        * The newly fetched track is the same as our stored
